@@ -27,7 +27,13 @@ public class MahasiswaDAOImpl implements MahasiswaDAO {
 
 	@Override
 	public List<MahasiswaModel> findAll() {
-		return jdbc.query("select * from t_mahasiswa", new BeanPropertyRowMapper<MahasiswaModel>(MahasiswaModel.class));
+		return jdbc.query("select * from mahasiswa_model", new BeanPropertyRowMapper<MahasiswaModel>(MahasiswaModel.class));
+	}
+
+	@Override
+	public MahasiswaModel findById(int id) {
+		// TODO Auto-generated method stub
+		return jdbc.queryForObject("select * from mahasiswa_model where mahasiswa_id = ?", new BeanPropertyRowMapper<MahasiswaModel>(MahasiswaModel.class), id);
 	}
 
 }

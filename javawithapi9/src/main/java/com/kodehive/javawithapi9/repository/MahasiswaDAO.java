@@ -9,4 +9,6 @@ public interface MahasiswaDAO {
 	public int save(MahasiswaModel m);
 
 	public List<MahasiswaModel> findAll();
+	
+	public MahasiswaModel findById(int id);
 }

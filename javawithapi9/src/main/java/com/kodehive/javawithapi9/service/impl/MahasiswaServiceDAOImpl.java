@@ -23,7 +23,14 @@ public class MahasiswaServiceDAOImpl implements MahasiswaServiceDAO { // service
 	@Override
 	public List<MahasiswaModel> findAll() {
 		// TODO Auto-generated method stub
+		
 		return mahasiswaRepository.findAll();
+	}
+
+	@Override
+	public MahasiswaModel findById(int id) {
+		// TODO Auto-generated method stub
+		return mahasiswaRepository.findById(id);
 	}
 
 }
