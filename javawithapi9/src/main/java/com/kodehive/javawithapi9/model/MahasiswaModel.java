@@ -16,18 +16,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="T_MAHASISWA")
 public class MahasiswaModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int mahasiswaId;
-	private String mahasiwaName;
+	private String mahasiswaName;
 	private int mahasiswaUsia;
 	private int mahasiswaSpp;
 
-	public MahasiswaModel(String mahasiwaName, int mahasiswaUsia, int mahasiswaSpp) {
-		this.mahasiwaName = mahasiwaName;
+	public MahasiswaModel(String mahasiswaName, int mahasiswaUsia, int mahasiswaSpp) {
+		this.mahasiswaName = mahasiswaName;
 		this.mahasiswaUsia = mahasiswaUsia;
 		this.mahasiswaSpp = mahasiswaSpp;
 	}

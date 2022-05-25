@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kodehive.javawithapi9.model.MahasiswaModel;
 import com.kodehive.javawithapi9.repository.MahasiswaDAO;
+import com.kodehive.javawithapi9.service.MahasiswaServiceDAO;
 
 @Component
 @RestController
@@ -19,14 +20,19 @@ public class MahasiswaController {
 	@Autowired
 	MahasiswaDAO mahasiswaDao;
 	
+	@Autowired
+	MahasiswaServiceDAO mahasiswaServiceDao;
+	
 	@PostMapping("/postMahasiswa")
 	public String save(@RequestBody MahasiswaModel m)
 	{
-		return mahasiswaDao.save(m)+" data berhasil disimpan";
+		return mahasiswaServiceDao.save(m)+" data berhasil disimpan";
 	}
 	
 	@GetMapping("/getAllMahasiswa")
 	public List<MahasiswaModel> findAll(){
-		return mahasiswaDao.findAll();
+		return mahasiswaServiceDao.findAll();
 	}
+	
+	// findById
 }

@@ -20,9 +20,9 @@ public class MahasiswaDAOImpl implements MahasiswaDAO {
 	
 	@Override
 	public int save(MahasiswaModel m) {
-		return jdbc.update("insert into t_mahasiswa (mahasiwa_name, mahasiswa_usia, mahasiswa_spp)"
-				+ "VALUES"
-				+ "(?,?,?)", new Object[] {m.getMahasiwaName(), m.getMahasiswaUsia(), m.getMahasiswaSpp()});
+		return jdbc.update("insert into mahasiswa_model (mahasiswa_name, mahasiswa_usia, mahasiswa_spp)"
+				+ "values"
+				+ "(?,?,?)", new Object[] {m.getMahasiswaName(), m.getMahasiswaUsia(), m.getMahasiswaSpp()});
 	}
 
 	@Override
