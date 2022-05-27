@@ -7,30 +7,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 @Entity
-public class MahasiswaModel {
+public class Mahasiswa {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int mahasiswaId;
-	private String mahasiswaName;
-	private int mahasiswaUsia;
-	private int mahasiswaSpp;
-
-	public MahasiswaModel(String mahasiswaName, int mahasiswaUsia, int mahasiswaSpp) {
-		this.mahasiswaName = mahasiswaName;
-		this.mahasiswaUsia = mahasiswaUsia;
-		this.mahasiswaSpp = mahasiswaSpp;
-	}
-	
-	
+	private int id;
+	private String name;
+	private int jurusan_id;
+	private int usia;
+	private int spp;
 	
 }
